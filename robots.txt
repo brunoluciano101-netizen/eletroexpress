@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eletroexpress.app.br/sitemap.xml

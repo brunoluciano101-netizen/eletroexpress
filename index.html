@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EletroExpress | Tecnologia, Eletrônicos e Gadgets com Envio Rápido para Todo o Brasil</title>
+  <meta name="description" content="Compre os melhores eletrônicos, smartwatches, fones Bluetooth, projetores e gadgets inteligentes na EletroExpress (eletroexpress.app.br). Pagamento via Pix na hora ou até 12x com rastreio para todo o Brasil." />
+  <meta name="keywords" content="EletroExpress, eletroexpress.app.br, eletrônicos, smartwatch, fone bluetooth, projetor portátil, casa inteligente, gadgets, loja de eletrônicos Brasil" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://eletroexpress.app.br/" />
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EletroExpress" />
+  <meta property="og:title" content="EletroExpress — Tecnologia e Eletrônicos Inteligentes para Todo o Brasil" />
+  <meta property="og:description" content="Mais de 100 produtos tecnológicos selecionados com garantia, vídeo demonstrativo e envio imediato para todo o Brasil." />
+  <meta property="og:url" content="https://eletroexpress.app.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Dados Estruturados Schema.org para Google e Avaliações -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "EletroExpress",
+    "url": "https://eletroexpress.app.br",
+    "description": "Loja brasileira especializada em eletrônicos, smartwatches, áudio, casa inteligente e acessórios tech com envio para todo o Brasil.",
+    "areaServed": "BR",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1842",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Barra Superior de Avisos -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>🇧🇷 <strong>FRETE GRÁTIS</strong> para todo o Brasil em compras acima de R$ 99,00</span>
+      <span class="top-bar-divider">|</span>
+      <span>⚡ <strong>PIX COM APROVAÇÃO NA HORA</strong> &amp; Envio com Código de Rastreio</span>
+      <span class="top-bar-divider">|</span>
+      <span>🌐 Loja Oficial: <strong>eletroexpress.app.br</strong></span>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="container header-main">
+      <a href="#inicio" class="brand-logo" onclick="App.resetFilters()">
+        <span class="brand-icon">⚡</span>
+        <div class="brand-text">
+          <span class="brand-name">Eletro<strong>Express</strong></span>
+          <span class="brand-domain">eletroexpress.app.br</span>
+        </div>
+      </a>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar entre 108 eletrônicos (ex: smartwatch, fone, projetor, carregador)..."
+          aria-label="Buscar produtos"
+        />
+        <button type="button" id="searchBtn" title="Buscar">🔍</button>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="header-btn" onclick="App.openTrackingModal()">
+          <span class="btn-emoji">📦</span>
+          <span class="btn-label">Rastrear</span>
+        </button>
+
+        <button type="button" class="header-btn" onclick="AdminApp.openAdminEntry()">
+          <span class="btn-emoji">🔐</span>
+          <span class="btn-label">Painel &amp; App</span>
+        </button>
+
+        <button type="button" class="cart-trigger" onclick="App.toggleCart(true)">
+          <span>🛒 Carrinho</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu de Categorias -->
+    <nav class="category-nav" aria-label="Categorias da Loja">
+      <div class="container">
+        <ul class="category-list" id="categoryMenu"></ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">⭐ 4.9/5 no Google • +18.000 clientes atendidos no Brasil</div>
+        <h1>Tecnologia de Ponta com <span>Entrega Expressa</span> em Todo o Brasil</h1>
+        <p>
+          Catálogo oficial <strong>eletroexpress.app.br</strong> com <strong>108 produtos validados</strong>,
+          vídeo demonstrativo real em cada item, garantia de 90 dias e recebimento instantâneo via Pix ou cartão em até 12x.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#catalogo" class="btn-primary">Explorar 108 Produtos</a>
+          <a href="#avaliacoes" class="btn-secondary">Ver Avaliações Google ⭐</a>
+        </div>
+        <div class="hero-trust-row">
+          <div>✅ Compra 100% Protegida</div>
+          <div>⚡ Pix Cai na Hora</div>
+          <div>🎥 Vídeos Reais dos Produtos</div>
+          <div>🚚 Rastreio Correios/Transportadora</div>
+        </div>
+      </div>
+
+      <div class="hero-showcase-card">
+        <div class="showcase-badge">🔥 MAIS VENDIDO DO MÊS</div>
+        <div id="heroFeaturedProduct"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Filtros e Ordenação -->
+  <main class="container main-catalog" id="catalogo">
+    <div class="catalog-toolbar">
+      <div class="catalog-title-wrap">
+        <h2 id="catalogHeading">Todos os Produtos Validados (108)</h2>
+        <p id="catalogSubheading">Clique em qualquer produto para ver galeria de fotos e assistir ao vídeo demonstrativo.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <select id="sortSelect" aria-label="Ordenar produtos">
+          <option value="featured">Mais Relevantes</option>
+          <option value="bestsellers">Mais Vendidos</option>
+          <option value="price-asc">Menor Preço</option>
+          <option value="price-desc">Maior Preço</option>
+          <option value="rating">Melhor Avaliação</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grade de Produtos -->
+    <div class="products-grid" id="productsGrid"></div>
+  </main>
+
+  <!-- Seção de Avaliações Públicas (Estilo Google Reviews) -->
+  <section class="reviews-section" id="avaliacoes">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <span class="google-badge">G Avaliações Verificadas • eletroexpress.app.br</span>
+          <h2>O que os clientes de todo o Brasil dizem sobre a EletroExpress</h2>
+          <p>Nota média <strong>4.9 de 5.0</strong> baseada em compras reais entregues de Norte a Sul do país.</p>
+        </div>
+        <button type="button" class="btn-primary" onclick="App.openReviewModal()">✍️ Avaliar a Loja</button>
+      </div>
+
+      <div class="reviews-grid" id="storeReviewsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Rodapé Profissional -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-logo footer-brand">
+          <span class="brand-icon">⚡</span>
+          <div class="brand-text">
+            <span class="brand-name">Eletro<strong>Express</strong></span>
+            <span class="brand-domain">https://eletroexpress.app.br</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Loja oficial de eletrônicos, smartwatches, acessórios e casa inteligente com envio garantido para todos os estados do Brasil.
+        </p>
+        <p class="footer-contact">📧 contato@eletroexpress.app.br • Atendimento Seg a Sáb</p>
+      </div>
+
+      <div>
+        <h4>Categorias Principais</h4>
+        <ul class="footer-links">
+          <li><a href="#catalogo" onclick="App.selectCategory('smartwatches')">Smartwatches &amp; Wearables</a></li>
+          <li><a href="#catalogo" onclick="App.selectCategory('audio')">Áudio &amp; Fones Bluetooth</a></li>
+          <li><a href="#catalogo" onclick="App.selectCategory('casainteligente')">Casa Inteligente</a></li>
+          <li><a href="#catalogo" onclick="App.selectCategory('projetores')">Projetores &amp; TV</a></li>
+          <li><a href="#catalogo" onclick="App.selectCategory('gamer')">Gamer &amp; Setup</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Atendimento &amp; Segurança</h4>
+        <ul class="footer-links">
+          <li><a href="#rastrear" onclick="App.openTrackingModal(); return false;">Rastrear Meu Pedido</a></li>
+          <li><a href="#avaliacoes">Avaliações de Clientes</a></li>
+          <li><a href="#admin" onclick="AdminApp.openAdminEntry(); return false;">Acesso Restrito (Admin &amp; Pagamentos)</a></li>
+        </ul>
+        <div class="payment-badges">
+          <span>💠 PIX Instantâneo</span>
+          <span>💳 Visa / Master / Elo</span>
+          <span>🔒 SSL 256-bit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        © 2026 EletroExpress (eletroexpress.app.br) — Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gaveta Lateral do Carrinho -->
+  <div class="drawer-overlay" id="cartOverlay" onclick="App.toggleCart(false)"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de Compras">
+    <div class="drawer-header">
+      <h3>🛒 Seu Carrinho</h3>
+      <button type="button" class="close-btn" onclick="App.toggleCart(false)">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsContainer"></div>
+
+    <div class="drawer-footer">
+      <div class="cart-summary-row">
+        <span>Frete para todo o Brasil:</span>
+        <strong class="free-shipping-tag">GRÁTIS</strong>
+      </div>
+      <div class="cart-summary-row total-row">
+        <span>Total:</span>
+        <strong id="cartTotalValue">R$ 0,00</strong>
+      </div>
+      <div class="pix-discount-note" id="cartPixNote">
+        No Pix à vista: <strong>R$ 0,00</strong> (5% OFF extra)
+      </div>
+      <button type="button" class="btn-primary btn-block" id="checkoutStartBtn" onclick="App.openCheckoutModal()">
+        Finalizar Compra Agora ⚡
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modal de Detalhes do Produto + Galeria + Vídeo HD -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-box modal-xl">
+      <button type="button" class="modal-close" onclick="App.closeModal('productModal')">✕</button>
+      <div id="productModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal de Checkout & Plataforma de Recebimento Instantâneo -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-box modal-lg">
+      <button type="button" class="modal-close" onclick="App.closeModal('checkoutModal')">✕</button>
+      <div id="checkoutModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal de Rastreamento de Pedido -->
+  <div class="modal-backdrop" id="trackingModal">
+    <div class="modal-box modal-md">
+      <button type="button" class="modal-close" onclick="App.closeModal('trackingModal')">✕</button>
+      <h3>📦 Rastrear Pedido — EletroExpress</h3>
+      <p class="modal-sub">Informe o código do pedido (ex: <strong>EE-1001</strong>) ou seu CPF para acompanhar a entrega.</p>
+      <div class="form-row">
+        <input type="text" id="trackingQueryInput" placeholder="Digite o número do pedido ou CPF..." />
+        <button type="button" class="btn-primary" onclick="App.searchOrderTracking()">Consultar</button>
+      </div>
+      <div id="trackingResultBox" class="tracking-result"></div>
+    </div>
+  </div>
+
+  <!-- Modal para Nova Avaliação Pública -->
+  <div class="modal-backdrop" id="reviewModal">
+    <div class="modal-box modal-md">
+      <button type="button" class="modal-close" onclick="App.closeModal('reviewModal')">✕</button>
+      <h3>⭐ Avaliar a EletroExpress</h3>
+      <p class="modal-sub">Sua avaliação ajuda outros compradores em todo o Brasil.</p>
+      <form id="newReviewForm" onsubmit="App.submitStoreReview(event)">
+        <div class="form-group">
+          <label>Seu Nome e Cidade/UF</label>
+          <input type="text" id="revAuthor" required placeholder="Ex: Carlos Mendes - Belo Horizonte/MG" />
+        </div>
+        <div class="form-group">
+          <label>Nota da Experiência</label>
+          <select id="revStars">
+            <option value="5">⭐⭐⭐⭐⭐ (5.0 - Excelente)</option>
+            <option value="4">⭐⭐⭐⭐ (4.0 - Muito Bom)</option>
+            <option value="3">⭐⭐⭐ (3.0 - Bom)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Produto Comprado</label>
+          <input type="text" id="revProduct" required placeholder="Ex: Smartwatch Ultra Series 9 AMOLED" />
+        </div>
+        <div class="form-group">
+          <label>Seu Comentário</label>
+          <textarea id="revComment" rows="3" required placeholder="Conte como foi a entrega e a qualidade do produto..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-block">Publicar Avaliação</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Login e Painel Administrativo / Aplicativo de Pagamentos -->
+  <div class="modal-backdrop" id="adminModal">
+    <div class="modal-box modal-xxl">
+      <button type="button" class="modal-close" onclick="App.closeModal('adminModal')">✕</button>
+      <div id="adminModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Notificação Flutuante -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
